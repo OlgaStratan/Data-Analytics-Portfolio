@@ -13,8 +13,9 @@ The initial CSV dataset contains some demographics information like location, po
 Here you can see a few example of SQL Queries that have been used, you can see the full SQL Code in the files section of this project.
 
 ### Likelihood of dying from Covid in Germany
+We want to know the percentage of covid deaths rate in Germany every day, so here we divide the total death numbers by the number of total cases. This query shows the likelihood of people dying from covid in Germany.
 
 ![Screenshot 2022-12-19 155608](https://user-images.githubusercontent.com/67650188/208454820-9feadd5a-0909-4dee-a5cb-b86b2cc39c2e.png)
 
-### What percentage of population gor Covid every day**
-
+### What percentage of population got Covid
+This query shows the percentage of people who contract covid in the Germany each day. We can see that as of the latest date (13/12/2022), covid infection rate in the Germany is over 44%!
