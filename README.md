@@ -29,3 +29,6 @@ This following query breaks things down by date. We divide the total number of n
 
 ### Now let’s join the **covid_deaths** and **covid_vaccinations** tables together by location & date. We would like to look at total population versus vaccination, and figure out how many people that have been vaccinated across the countries every day.
 Let's also calculate the rolling count of new vaccinations in the world, let’s use window functions **PARTITION BY** to achieve this. The following query calculates the total number of new vaccinations per day across the countries.
+
+![Screenshot 2022-12-19 172030](https://user-images.githubusercontent.com/67650188/208471694-1e17e0ec-83d5-4ed2-93d2-c796f8c185c5.png)
+
