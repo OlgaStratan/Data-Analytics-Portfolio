@@ -12,15 +12,15 @@ The initial CSV dataset contains some demographics information like location, po
 ## SQL Queries 
 Here you can see a few example of SQL Queries that have been used, you can see the full SQL Code in the files section of this project.
 
-### Likelihood of dying from Covid in Germany
-We want to know the percentage of covid deaths rate in Germany every day, so here we divide the total death numbers by the number of total cases. This query shows the likelihood of people dying from covid in Germany.
-
-![Screenshot 2022-12-19 155608](https://user-images.githubusercontent.com/67650188/208454820-9feadd5a-0909-4dee-a5cb-b86b2cc39c2e.png)
-
-### What percentage of population got Covid
+### What percentage of population got Covid in Germany
 This query shows the percentage of people who contract covid in the Germany each day. We can see that as of the latest date (13/12/2022), covid infection rate in the Germany is over 44%!
 ![Screenshot 2022-12-19 161214](https://user-images.githubusercontent.com/67650188/208458020-7047ae3c-7d74-48de-81a6-492e5f5ef214.png)
 
 
 ### Countries with the highest Death Count
 This following query looks at the highest total death count per population in overall for each country. Since the total_deaths variable is a **VARCHAR**, we need to convert it into **INTEGER** first. We can see that United States, Brazil, and India are the first three countries that have the highest covid deaths count as per 13/12/2022. 
+
+![Screenshot 2022-12-19 161824](https://user-images.githubusercontent.com/67650188/208459255-d6902cec-3df1-4478-9a35-1213484ceb86.png)
+
+### Total Cases and Deaths by Date
+This following query breaks things down by date. We divide the total number of new deaths cases by the total number of new cases, to get the covid death rate in overall each day in the World.
