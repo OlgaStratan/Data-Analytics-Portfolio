@@ -24,3 +24,8 @@ This following query looks at the highest total death count per population in ov
 
 ### Total Cases and Deaths by Date
 This following query breaks things down by date. We divide the total number of new deaths cases by the total number of new cases, to get the covid death rate in overall each day in the World.
+
+![Screenshot 2022-12-19 162421](https://user-images.githubusercontent.com/67650188/208460455-16a5d2d8-0b9b-49dd-bd9d-2969a4ed406a.png)
+
+### Now let’s join the **covid_deaths** and **covid_vaccinations** tables together by location & date. We would like to look at total population versus vaccination, and figure out how many people that have been vaccinated across the countries every day.
+Let's also calculate the rolling count of new vaccinations in the world, let’s use window functions **PARTITION BY** to achieve this. The following query calculates the total number of new vaccinations per day across the countries.
