@@ -11,3 +11,10 @@ The initial CSV dataset contains some demographics information like location, po
 
 ## SQL Queries 
 Here you can see a few example of SQL Queries that have been used, you can see the full SQL Code in the files section of this project.
+
+### Likelihood of dying from Covid in Germany
+
+![Screenshot 2022-12-19 155608](https://user-images.githubusercontent.com/67650188/208454820-9feadd5a-0909-4dee-a5cb-b86b2cc39c2e.png)
+
+### What percentage of population gor Covid every day**
+
