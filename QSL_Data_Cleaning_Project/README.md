@@ -16,3 +16,4 @@ Select *
 FROM portofolio.dbo.NashvilleHousing
 ```
 **output:**
+![Screenshot 2022-12-26 165338](https://user-images.githubusercontent.com/67650188/209565701-545a52a2-2bb1-413a-a61f-c18cd6b4b487.png)
