@@ -83,3 +83,28 @@ WHERE a.PropertyAddress IS NULL
 ## Breaking out Address into Individual Columns (Address, City, State)
 
 The PropertyAddress column contains the address and the city the property is located. We could separate the address and the city into different columns for future analysis purposes.
+
+![Screenshot 2022-12-26 180032](https://user-images.githubusercontent.com/67650188/209569832-55264fcc-e48f-43ef-a726-5cf9d8018acf.png)
+
+**Create new columns for Address and City of Property**
+```
+ALTER TABLE NashvilleHousing
+ADD PropertySplitAddress Nvarchar(255);
+
+ALTER TABLE NashvilleHousing
+ADD PropertySplitCity Nvarchar(255);
+```
+
+**Update the columns**
+
+```
+UPDATE NashvilleHousing
+SET PropertySplitAddress = SUBSTRING(PropertyAddress,1, CHARINDEX(',',PropertyAddress)-1)
+
+UPDATE NashvilleHousing
+SET PropertySplitCity = SUBSTRING(PropertyAddress, CHARINDEX(',',PropertyAddress)+1,LEN(PropertyAddress))
+```
+
+**output:**
+
+
