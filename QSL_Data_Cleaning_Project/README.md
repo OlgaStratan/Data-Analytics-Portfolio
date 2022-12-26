@@ -50,5 +50,9 @@ I have identified that there are 29 rows with **NULL** property address.
 Select *
 FROM portofolio.dbo.NashvilleHousing
 WHERE PropertyAddress IS NULL
+ORDER BY ParcelID
 ```
 
+![Screenshot 2022-12-26 173034](https://user-images.githubusercontent.com/67650188/209567875-84eb6875-98d5-4b4a-9d13-6013e007362f.png)
+
+Taking a closer look at the dataset, I have identified that te entries with the same ParcelID have the same PropertyAddress
