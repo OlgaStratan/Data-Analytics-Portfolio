@@ -142,3 +142,5 @@ FROM portofolio.dbo.NashvilleHousing
 ```
 **output:**
 
+![Screenshot 2022-12-26 181218](https://user-images.githubusercontent.com/67650188/209570694-054cffa3-307c-4ed0-948a-ce2c582e8e6d.png)
+
