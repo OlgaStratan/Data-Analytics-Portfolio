@@ -107,4 +107,38 @@ SET PropertySplitCity = SUBSTRING(PropertyAddress, CHARINDEX(',',PropertyAddress
 
 **output:**
 
+![Screenshot 2022-12-26 180518](https://user-images.githubusercontent.com/67650188/209570170-2830e2be-978f-472d-a116-ece0cbc381ab.png)
+
+For the OwnerAddress, it contains Address, City and State in just a single column. We also need to split them to their own columns as well.
+
+```
+-- Create new column for OwnerAddress
+ALTER TABLE NashvilleHousing
+ADD OwnerSplitAddress Nvarchar(255);
+
+-- Update OwnerSplitAddress to be included only address
+UPDATE NashvilleHousing
+SET OwnerSplitAddress = PARSENAME(REPLACE(OwnerAddress, ',', '.'),3)
+
+-- Create new column for OwnerCity
+ALTER TABLE NashvilleHousing
+ADD OwnerSplitCity Nvarchar(255);
+
+-- Update OwnerSplitCity to be included only city
+UPDATE NashvilleHousing
+SET OwnerSplitCity = PARSENAME(REPLACE(OwnerAddress, ',', '.'),2)
+
+-- Create new column for OwnerState
+ALTER TABLE NashvilleHousing
+ADD OwnerSplitState Nvarchar(255);
+
+-- Update OwnerSplitState to be included only State
+UPDATE NashvilleHousing
+SET OwnerSplitState = PARSENAME(REPLACE(OwnerAddress, ',', '.'),1)
+
+-- Check the updates
+Select OwnerSplitAddress, OwnerSplitCity, OwnerSplitState
+FROM portofolio.dbo.NashvilleHousing
+```
+**output:**
 
