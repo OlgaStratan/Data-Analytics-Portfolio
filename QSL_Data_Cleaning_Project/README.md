@@ -40,4 +40,15 @@ SET SaleDateConverted = CONVERT(Date,SaleDate)
 Select SaleDateConverted
 FROM portofolio.dbo.NashvilleHousing
 ```
+**output:**
+
+![Screenshot 2022-12-26 172402](https://user-images.githubusercontent.com/67650188/209567427-5dd6ab47-7d61-4c62-97b9-83d78669f390.png)
+
+### Populate missing property address data
+I have identified that there are 29 rows with **NULL** property address.
+```
+Select *
+FROM portofolio.dbo.NashvilleHousing
+WHERE PropertyAddress IS NULL
+```
 
