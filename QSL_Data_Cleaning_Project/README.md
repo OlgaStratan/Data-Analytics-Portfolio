@@ -8,7 +8,7 @@ The following tasks were performed:
 - **Standardize “Sold as Vacant” field (from Y/N to Yes and No)**
 - **Remove Duplicates**
 
-### Overview of data
+## Overview of data
 ```
 -- Overview of the dataset
 
@@ -18,7 +18,7 @@ FROM portofolio.dbo.NashvilleHousing
 **output:**
 ![Screenshot 2022-12-26 165338](https://user-images.githubusercontent.com/67650188/209565701-545a52a2-2bb1-413a-a61f-c18cd6b4b487.png)
 
-### Standardize date format
+## Standardize date format
 
 In the **‘SaleDate’** column, we see that the current format of date is in **YYYY-MM-DD HH:MM:SS**
 
@@ -44,7 +44,7 @@ FROM portofolio.dbo.NashvilleHousing
 
 ![Screenshot 2022-12-26 172402](https://user-images.githubusercontent.com/67650188/209567427-5dd6ab47-7d61-4c62-97b9-83d78669f390.png)
 
-### Populate missing property address data
+## Populate missing property address data
 I have identified that there are 29 rows with **NULL** property address.
 ```
 Select *
@@ -68,4 +68,18 @@ JOIN portofolio.dbo.NashvilleHousing b
 	AND a.[UniqueID ] <> b.[UniqueID ]
 WHERE a.PropertyAddress IS NULL
 ```
+![Screenshot 2022-12-26 175503](https://user-images.githubusercontent.com/67650188/209569492-fe1bdbd0-dc1f-4ce4-99ef-073e74b8cf0f.png)
 
+Now I can go ahead and update the missing PropertyAddress
+```
+UPDATE a
+SET PropertyAddress = ISNULL(a.PropertyAddress, b.PropertyAddress)
+FROM portofolio.dbo.NashvilleHousing a
+JOIN portofolio.dbo.NashvilleHousing b
+	ON a.ParcelID = b.ParcelID
+	AND a.[UniqueID ] <> b.[UniqueID ]
+WHERE a.PropertyAddress IS NULL
+```
+## Breaking out Address into Individual Columns (Address, City, State)
+
+The PropertyAddress column contains the address and the city the property is located. We could separate the address and the city into different columns for future analysis purposes.
