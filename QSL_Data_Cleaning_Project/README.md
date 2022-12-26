@@ -55,4 +55,17 @@ ORDER BY ParcelID
 
 ![Screenshot 2022-12-26 173034](https://user-images.githubusercontent.com/67650188/209567875-84eb6875-98d5-4b4a-9d13-6013e007362f.png)
 
-Taking a closer look at the dataset, I have identified that te entries with the same ParcelID have the same PropertyAddress
+Taking a closer look at the dataset, I have identified that te entries with the same **ParcelID** have the same **PropertyAddress**. Therefore, we can use ParcelID as a reference point to populate the missing address in PropertyAddress.
+
+![Screenshot 2022-12-26 174639](https://user-images.githubusercontent.com/67650188/209568870-3d5d7488-3a48-4a96-8273-9fd17eace4a8.png)
+
+To do so I have used **self-join** to populate the null property address with a property address that had the same ParcelID.
+```
+Select a.ParcelID, a.PropertyAddress, b.ParcelID, b.PropertyAddress, ISNULL(a.PropertyAddress, b.PropertyAddress)
+FROM portofolio.dbo.NashvilleHousing a
+JOIN portofolio.dbo.NashvilleHousing b
+	ON a.ParcelID = b.ParcelID
+	AND a.[UniqueID ] <> b.[UniqueID ]
+WHERE a.PropertyAddress IS NULL
+```
+
