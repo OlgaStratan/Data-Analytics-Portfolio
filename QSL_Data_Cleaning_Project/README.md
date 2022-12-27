@@ -166,6 +166,8 @@ FROM portofolio.dbo.NashvilleHousing
 
 ![Screenshot 2022-12-27 131923](https://user-images.githubusercontent.com/67650188/209665852-2a375071-0d78-490e-a88b-78d35f907b80.png)
 
+## Remove Duplicates
+NOTE: It is not advisable to DELETE the actual data from the database, unless you have a backup of the table or the whole dataset.
 
 ## What We Did
 - **Standardize date format**
