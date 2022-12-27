@@ -161,3 +161,7 @@ SET SoldAsVacant =  CASE
 		END
 FROM portofolio.dbo.NashvilleHousing
 ```
+
+**output:**
+
+
