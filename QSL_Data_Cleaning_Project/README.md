@@ -169,7 +169,7 @@ FROM portofolio.dbo.NashvilleHousing
 ## Remove Duplicates
 NOTE: It is not advisable to DELETE the actual data from the database, unless you have a backup of the table or the whole dataset.
 
-To remove duplicates, I will consider that if **PropertyAddress, SalePrice, SaleDate, and LegalReference** are the same, then it’s a duplicate.
+To remove duplicates, I will consider that if **ParcelID, PropertyAddress, SalePrice, SaleDate, and LegalReference** are the same, then it’s a duplicate.
 
 I will use CTE and window functions to separate them into groups based on above mentioned conditions.
 ```
@@ -197,6 +197,30 @@ WHERE row_num > 1
 
 **output:**
 
+![Screenshot 2022-12-27 135625](https://user-images.githubusercontent.com/67650188/209669959-c5ef38c4-3d82-4af4-a8dc-2a2e8c85f245.png)
+
+If **row_num** has value of **more than 1** meaning that it is duplicated. There have been identified 104 duplicated entries. 
+
+Now let’s actually delete these duplicates from the table.
+```
+--Use CTE and window function to seperate them into groups
+WITH RowNumCTE AS(
+SELECT *,
+	ROW_NUMBER() OVER(
+	PARTITION BY ParcelID,
+		     PropertyAddress,
+		     SalePrice,
+		     SaleDate,
+		     LegalReference
+	ORDER BY  UniqueID
+	) row_num
+FROM portofolio.dbo.NashvilleHousing
+)
+-- Remove Duplicates
+DELETE
+FROM RowNumCTE
+WHERE row_num >1
+```
 
 ## What We Did
 - **Standardize date format**
