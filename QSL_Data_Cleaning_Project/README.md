@@ -144,3 +144,6 @@ FROM portofolio.dbo.NashvilleHousing
 
 ![Screenshot 2022-12-26 181218](https://user-images.githubusercontent.com/67650188/209570694-054cffa3-307c-4ed0-948a-ce2c582e8e6d.png)
 
+## Standardize “Sold as Vacant” field (from Y/N to Yes and No)
+
+In SoldAsVacant column, we have 4 categorical values — **Y, N, Yes, No** — instead of 2 - Yes and No
