@@ -164,4 +164,16 @@ FROM portofolio.dbo.NashvilleHousing
 
 **output:**
 
+![Screenshot 2022-12-27 131923](https://user-images.githubusercontent.com/67650188/209665852-2a375071-0d78-490e-a88b-78d35f907b80.png)
 
+
+## What We Did
+- **Standardize date format**
+- **Populate missing property address data**
+- **Parsing long-formatted address into individual columns (Address, City, State)**
+- **Standardize “Sold as Vacant” field (from Y/N to Yes and No)**
+- **Remove Duplicates**
+
+### Having clean data will ultimately increase overall productivity and allow for the highest quality information in our decision-making.
+
+All the SQL code used in this project could be found in the files above together with the raw dataset.
