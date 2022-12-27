@@ -147,3 +147,17 @@ FROM portofolio.dbo.NashvilleHousing
 ## Standardize “Sold as Vacant” field (from Y/N to Yes and No)
 
 In SoldAsVacant column, we have 4 categorical values — **Y, N, Yes, No** — instead of 2 - Yes and No
+
+![Screenshot 2022-12-27 131640](https://user-images.githubusercontent.com/67650188/209665517-af53e4dd-6808-4a85-b942-8974f195d7a1.png)
+
+Therefore, we need to format them by convert Y and N into Yes and No respectively. We can do so by using conditions statement.
+```
+-- Convert Y and N into Yes and No
+UPDATE NashvilleHousing
+SET SoldAsVacant =  CASE  
+		WHEN SoldAsVacant = 'Y' THEN 'Yes'
+		WHEN SoldAsVacant = 'N' THEN 'No'
+		ELSE SoldAsVacant
+		END
+FROM portofolio.dbo.NashvilleHousing
+```
