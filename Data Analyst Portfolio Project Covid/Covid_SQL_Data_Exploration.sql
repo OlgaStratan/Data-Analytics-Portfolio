@@ -61,7 +61,7 @@ ORDER BY Total_Death_Count DESC
 
 ----Showing the Groupes/Continets with Highest Death count per Population
 
-SELECT continent,  MAX(cast(total_deaths as int)) as Total_Death_Count
+SELECT continent,  SUM(cast(total_deaths as int)) as Total_Death_Count
 FROM portofolio..CovidDeaths
 --WHERE Location = 'Germany'
 WHERE continent IS NOT NULL
@@ -81,9 +81,11 @@ ORDER BY 1,2
 
 --Total cases and deaths
 
+-- This query shows the global number of total cases, deaths and the percentage of deaths across the coutries
 SELECT SUM(new_cases) as Total_cases, SUM(cast(new_deaths as int)) as Total_deaths, SUM(cast(new_deaths as int))/SUM(new_cases)*100 as Death_Percentage
 FROM portofolio..CovidDeaths
 WHERE continent IS NOT NULL
+-- in some places within the table the Continent is NULL and the Location is a Continent or other group as income level.
 ORDER BY 1,2
 
 
