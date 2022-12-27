@@ -67,3 +67,15 @@ FROM portofolio..CovidDeaths
 WHERE continent IS NOT NULL
 GROUP BY location, population, date
 ORDER BY percent_of_population_infected DESC
+
+**output:**
+
+![Screenshot 2022-12-27 142748](https://user-images.githubusercontent.com/67650188/209673501-77f9004b-3f82-4b78-a488-8bb6472024ab.png)
+
+### This is the end for the part one of the project, in the next section I have used the results tables as the data sources (in excel format) for the visualizations in Tableau.
+
+## PART II
+
+## Final Dashboard
+
+You can access the [Dashboard here.](https://public.tableau.com/views/CovidDashboard_16717196289560/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link)
