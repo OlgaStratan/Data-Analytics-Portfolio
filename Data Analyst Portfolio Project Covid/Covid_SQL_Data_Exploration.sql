@@ -38,7 +38,7 @@ FROM portofolio..CovidDeaths
 --WHERE Location = 'Germany'
 WHERE continent IS NOT NULL
 GROUP BY location, population
-ORDER BY percent_of_population DESC
+ORDER BY percent_of_population_infected DESC
 
 --Showing the Countries with Highest Death count per Population
 
