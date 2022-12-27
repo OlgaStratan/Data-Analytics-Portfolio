@@ -24,3 +24,20 @@ WHERE continent IS NOT NULL
 -- in some places within the table the Continent is NULL and the Location is a Continent or other group as income level.
 ORDER BY 1,2
 ```
+
+**output:**
+
+![Screenshot 2022-12-27 141643](https://user-images.githubusercontent.com/67650188/209672236-2aef68dd-fd63-453e-961b-4e99d4005683.png)
+
+### 2. Total number of new deaths cases in each continent,
+
+Since the total_deaths variable is a **VARCHAR**, we need to convert it into **INTEGER** first. 
+We can see that **Europe, Norht America and Asia** are the Top three continents that have the highest covid deaths count as per 13/12/2022. 
+```
+SELECT continent,  SUM(cast(total_deaths as int)) as Total_Death_Count
+FROM portofolio..CovidDeaths
+WHERE continent IS NOT NULL
+GROUP BY continent
+ORDER BY Total_Death_Count DESC
+```
+**output:**
