@@ -9,10 +9,10 @@ The initial CSV dataset contains some demographics information like location, po
 
 ## PART I
 
-The first part of the project performs some data exploration with basic SQL queries that involves statements like **Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types.** 
+The first part of the project performs some data exploration with basic SQL queries that involves statements like **Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types.** The full SQL code can be find in the file section - [Covid_SQL_Data_Exploration.sql](https://github.com/OlgaStratan/Data-Analytics-Portfolio/blob/main/Data%20Analyst%20Portfolio%20Project%20Covid/Covid_SQL_Data_Exploration.sql)
 
 ### SQL Queries 
-Here I will show only the SQL Queries that have been used for further visualizations, you can see the full SQL Code with more advanced queries in the files section of this project.
+Here I will show only the SQL Queries that have been used for further visualizations.
 
 ### 1. This query shows the global number of total cases, deaths, and the percentage of deaths across the countries 
 
@@ -28,6 +28,7 @@ ORDER BY 1,2
 **output:**
 
 ![Screenshot 2022-12-27 141643](https://user-images.githubusercontent.com/67650188/209672236-2aef68dd-fd63-453e-961b-4e99d4005683.png)
+
 
 ### 2. Total number of new deaths cases in each continent,
 
@@ -79,3 +80,23 @@ ORDER BY percent_of_population_infected DESC
 ## Final Dashboard
 
 You can access the [Dashboard here.](https://public.tableau.com/views/CovidDashboard_16717196289560/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link)
+
+![Screenshot 2022-12-22 163712](https://user-images.githubusercontent.com/67650188/209673748-a471a348-a4b8-481c-a620-d924ad8ed9f9.png)
+
+## 1. The First For Graph - "Global Numbers" - represents the summary table on the global numbers of Covid-19 tracking.
+
+The main insight from this table is that although the number of Total Deaths during the 2 years of pandemic is huge, it exceeds **6 millions deaths**, the Avarage Percentage Death from the Covid-19 around the world is around **1.02**. Thus the chance of dying from Covid-19 is just **1%**.
+
+## 2. The second - "Total Deaths" Bar Chart - represents the total number of people that died from Covid on every Continent.
+It shows that the most deaths are in **Europe**, almost 2M of people died after contracting Covid-19.
+
+## 3. The third visualization is showing the map with the percent of population infected by each country across the years.
+From the first look, we can see that the **European Union** has highest infection rate.
+
+## 4. The last visualization, represents a line chart that shows the progression of covid infection rate across the years for a selection of countries.
+In this line chart I have chosen the following 4 Countries: **United Kingdom, Germany, Spain and Romania**. These are the countries I have spent the most time during the pandemic years. <br /> <br />  I have also added a forecasting analysis to the chart to predict the future trend of infection rate for each country. <br /> <br /> As of todays date 13th Dec 2022, Germany has **43.32%** of population infected, and the forecast shows that by the end of the next year 2023, Germany will have close to **65%.** This could be true or not, as these days the testing for Covid-19 has visibly decreased, thus the number of infected people is not that accurate.
+
+# Conclusion
+* Although Total Deaths during the 2 years of pandemic is big, and exceeds 6 millions deaths, the Avarage Percentage Death from the Covid-19 around the world is around **1.02.** Thus the chance of dying from Covid-19 is just **1%.**
+* The highest infection rate is in the **European Union Countries.**
+* Almost 2M of people died after contracting Covid-19 on **European Continent**.
