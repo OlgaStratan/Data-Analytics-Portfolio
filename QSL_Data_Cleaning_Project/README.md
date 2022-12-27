@@ -221,6 +221,7 @@ DELETE
 FROM RowNumCTE
 WHERE row_num >1
 ```
+DONE! now our dataset is much more tidy and neat, there are ready for any further analysis.
 
 ## What We Did
 - **Standardize date format**
