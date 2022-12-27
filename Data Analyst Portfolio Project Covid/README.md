@@ -46,10 +46,24 @@ ORDER BY Total_Death_Count DESC
 
 ### 3. This query shows the highest infection count and infection percentage for each country across the years
 ```
-SELECT Location,  population, MAX(total_cases) as Highest_infection_count, MAX((total_cases/population)*100) as percent_of_population_infected
+SELECT Location,  population, MAX(total_cases) as Highest_infection_count
+, MAX((total_cases/population)*100) as percent_of_population_infected
 FROM portofolio..CovidDeaths
 --WHERE Location = 'Germany'
 WHERE continent IS NOT NULL
 GROUP BY location, population
 ORDER BY percent_of_population_infected DESC
 ```
+**output:**
+
+![Screenshot 2022-12-27 142329](https://user-images.githubusercontent.com/67650188/209672990-f61d01a2-cc77-44d8-9a6a-dd1341a4a854.png)
+
+### 4. This query shows the highest infection count and infection percentage for each country every day
+
+SELECT Location,  population, date MAX(total_cases) as Highest_infection_count
+, MAX((total_cases/population)*100) as percent_of_population_infected
+FROM portofolio..CovidDeaths
+--WHERE Location = 'Germany'
+WHERE continent IS NOT NULL
+GROUP BY location, population, date
+ORDER BY percent_of_population_infected DESC
