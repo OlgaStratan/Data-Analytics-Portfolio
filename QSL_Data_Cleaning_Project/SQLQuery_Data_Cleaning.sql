@@ -152,9 +152,9 @@ SELECT *,
 				 SalePrice,
 				 SaleDate,
 				 LegalReference
-				 ORDER BY
-						UniqueID
-						) row_num
+		ORDER BY
+		UniqueID
+		) row_num
 
 FROM portofolio.dbo.NashvilleHousing
 )
