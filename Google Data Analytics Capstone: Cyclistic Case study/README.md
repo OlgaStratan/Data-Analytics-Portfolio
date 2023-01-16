@@ -152,7 +152,7 @@ I have also checked to see if there are significant numbers of **NULL values** i
  ```
  SELECT COUNT(*)
   FROM year2022
-  WHERE started_at = NULL OR ended_at = NULL
+  WHERE started_at IS NULL OR ended_at IS NULL
   -- found 0 NULLS
 
   SELECT COUNT(*)
@@ -164,4 +164,15 @@ I have also checked to see if there are significant numbers of **NULL values** i
   FROM year2022
   WHERE member_casual IS NULL
   -- found 0 NULLS
+ ```
+
+# Stage4: Analyze
+
+First of all I looked at the total number of rides counted per quarter:
+
+```
+SELECT  DATEPART(QUARTER, started_at) AS quarter, COUNT(*) AS total_rides_per_qtr
+FROM year2022
+GROUP BY DATEPART(QUARTER, started_at)
+ORDER BY total_rides_per_qtr
  ```
