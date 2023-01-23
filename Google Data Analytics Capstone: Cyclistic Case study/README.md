@@ -306,3 +306,23 @@ ORDER BY DATEPART(QUARTER FROM started_at), member_casual, total_rides DESC
 
 Looking at the results, I can see a clear pattern - Casual riders prefer electric bikes, whereas Member riders prefer classic bikes, this is only not true in the 4th quarter, where members chose electric bikes too. 
 Also I can see that the docket bikes are only used by the casual rider.
+
+What was the percentage of rides that were done with each type from the total rides in 2022?
+```
+WITH cte AS
+(
+SELECT CAST (COUNT(ride_id) AS numeric) AS total_num
+FROM year2022
+)
+SELECT rideable_type, CASE
+	WHEN rideable_type = 'electric_bike' THEN CAST((COUNT(*) / total_num) * 100 AS numeric)
+	WHEN rideable_type = 'docked_bike' THEN CAST((COUNT(*) / total_num) * 100 AS numeric)
+	WHEN rideable_type = 'classic_bike' THEN CAST((COUNT(*) / total_num) * 100 AS numeric)
+END AS percentage_of_total_rides
+FROM year2022, cte
+GROUP BY rideable_type, cte.total_num
+ORDER BY percentage_of_total_rides DESC
+```
+![image](https://user-images.githubusercontent.com/67650188/214081271-9d679379-00b3-4ae2-b91c-af1ca950812a.png)
+
+We can see that the electric bikes are the most popular and used ones. This can be looked into deeper, is the company providing more electric bikes or this is just popular among the clients and so the company has to focus on providing more of the electric bikes.  
