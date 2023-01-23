@@ -147,7 +147,7 @@ WHERE row_num > 1
  ```
 **NO Duplicates were found!**
 
-I have also checked to see if there are significant numbers of **NULL values** in the relevant columns for our analysis. ‘Started_at’ and ‘end_at’ (Time) and ‘member_casual’ columns did not have NULL values which is great news since they are important values for this analysis. There were around 5,000 NULL values for ‘latitude’ and ‘longitude’ columns, but this fact was not overwhelmingly damaging to the validity of the dataset considering the total 5 million rows.
+I have also checked to see if there are significant numbers of **NULL values** in the relevant columns for our analysis. ‘Started_at’ and ‘end_at’ (Time) and ‘member_casual’ columns did not have NULL values which is great news since they are important values for this analysis. There were around 5,000 NULL values for ‘latitude’ and ‘longitude’ columns and 1298357 for start and end station name, but this fact was not overwhelmingly damaging to the validity of the dataset considering the total 5 million rows.
 
  ```
  SELECT COUNT(*)
@@ -164,6 +164,11 @@ I have also checked to see if there are significant numbers of **NULL values** i
   FROM year2022
   WHERE member_casual IS NULL
   -- found 0 NULLS
+  
+ SELECT COUNT(*)
+ FROM year2022
+ WHERE start_station_name IS NULL OR end_station_name IS NULL
+  -- found 1298357 NULLS
  ```
 
 ## Stage4: Analyze
