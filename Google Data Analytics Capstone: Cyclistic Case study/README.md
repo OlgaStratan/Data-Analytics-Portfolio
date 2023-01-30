@@ -376,19 +376,19 @@ When using the docked bikes casual riders are spending more time riding but this
 
 ## Stage 6: Act
 
-I have performed my analysis, and gained some insights into the data, created visualization. It is time to use these insights to make data-driven recommandations for marketing stretagies.
+I have performed my analysis, and gained some insights and created visualizations. It is time to use these insights to make data-driven recommendations for marketing strategies.
 
 **Again, the goal is to convert casual riders into annual members**
 
-- The ride time for members is twice shorter than casual riders. So, members tend to ride more frequetly for reletively short distance whereas casual riders ride longer distance but less frequently. This is perhaps because many members ride for commute to work daily whereas casual riders ride for tourism purposes or lesuire activities along the coastline. This conclusion is also supported by the fact that there are significantly more casual rides during weekend whilst there is little or no change in number of members’ ride over a the whole week, and that causal riders ride along turistic locations along the coastline while members seem to ride inland as much as they ride coastal areas.Thus the best days of the week to reach casual riders are Saturday, Sunday, and Friday respectively.
+- The ride time for members is twice shorter as for casual riders. So, members tend to ride more frequently for relatively short distances whereas casual riders ride longer distances but less frequently. This is perhaps because many members ride to commute to work daily whereas casual riders ride for tourism purposes or leisure activities along the coastline. This conclusion is also supported by the fact that there are significantly more casual rides during the weekend whilst there is little or no change in the number of members’ rides over the whole week, and that causal riders ride along touristic locations along the coastline while members seem to ride inland as much as they ride coastal areas. Thus the best days of the week to reach casual riders are Saturday, Sunday, and Friday respectively.
 
-- Since casual riders ride a lot more during the weekend compared to weekday, company could consider introducing different types of membership such as weekend membership where causal riders who only ride during weekend can be easily attracted.
+- Since casual riders ride a lot more during the weekend compared to weekdays, the company could consider introducing different types of membership such as weekend membership where casual riders who only ride during the weekend can be easily attracted.
 
-- Since the significant bike usage begins **from May until September**, May can be a good time to launch the campaign which builds up until September, perhaps with additional focus in the most peak season between June and July.
+- Since the significant bike usage begins **from May until September**, May can be a good time to launch the campaign which builds up until September, perhaps with additional focus in the peak season between June and July.
 
-- **Streeter Dr & Grand Ave, DuSable LAke Shore Dr & Monroe St and Millennlum Park** are the top 3 stations casual riders visited most, and thus locations where campaign can reach most casual riders.
+- **Streeter Dr & Grand Ave, DuSable Lake Shore Dr & Monroe St and Millennlum Park** are the top 3 stations casual riders visited most, and thus locations where the campaign can reach most casual riders.
 
-- In order to attract and motivate casual riders to purchase an annual membership, company can consider launching a new membership program that rewards/incentivizes the riders for their usage. For example, riders will collect points depend on the ride length which they can exchange for rewards. Another instance would be creating ranking system or rider’s community where only members can participate and enjoy excluded and unique features. These program and system not only attract new members but also make existing members to continue their membership.
+- To attract and motivate casual riders to purchase an annual membership, the company can consider launching a new membership program that rewards/incentivize the riders for their usage. For example, riders will collect points depending on the ride length which they can exchange for rewards. Another instance would be creating a ranking system or rider’s community where only members can participate and enjoy excluded and unique features. This program and system not only attract new members but also make existing members continue their membership.
 
 
 [Link to the Tableau Public Presentation](https://public.tableau.com/shared/PM6WF45Z2?:display_count=n&:origin=viz_share_link)
