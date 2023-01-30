@@ -171,7 +171,7 @@ I have also checked to see if there are significant numbers of **NULL values** i
   -- found 1298357 NULLS
  ```
 
-## Stage4: Analyze
+## Stage 4 and 5: Analyze and Share
 
 First of all I looked at the total number of rides counted per quarter:
 
@@ -331,3 +331,64 @@ ORDER BY percentage_of_total_rides DESC
 ![image](https://user-images.githubusercontent.com/67650188/214081271-9d679379-00b3-4ae2-b91c-af1ca950812a.png)
 
 We can see that the electric bikes are the most popular and used ones. This can be looked into deeper, is the company providing more electric bikes or this is just popular among the clients and so the company has to focus on providing more of the electric bikes.  
+
+## Supporting Visualisations
+
+I used Tableau Public to run some further analysis and generate visualisations that support the key findings in the analysis.
+
+### I. Total Rides by user type
+![image](https://user-images.githubusercontent.com/67650188/215540427-31f969fe-161c-4c1d-909b-27aa52985dbf.png)
+
+
+**Members** dominate bike trips all year round. **Casual** riders pick in Summer, reaching **47%** of the total and are at the lowest during the winter with only **21%**.
+
+### II. Bike type by member type
+![image](https://user-images.githubusercontent.com/67650188/215541791-41d19e7e-f87d-47a4-bc9b-6e714e85669f.png)
+
+**The docked bikes** are mainly only used by *casual riders*.
+
+The ride distance is similar to all types of bikes and is similar among the user types.
+
+The ride length is significantly different for the casual user when using the **docket bikes**.
+
+When using the docked bikes casual riders are spending more time riding but this is not impacting the distance value as they are dropping off the bikes in the same location where it was picked up or nearby. (the most popular stations are in the turist zones).
+
+### III. Rides per user type by Month
+
+![image](https://user-images.githubusercontent.com/67650188/215544176-e06fd272-fd9d-4a03-ae1a-975003fb4496.png)
+
+### IV. Ride Length and Distance
+
+![image](https://user-images.githubusercontent.com/67650188/215544805-5aa6f405-cc4f-49e0-8dad-082437449980.png)
+
+### V. Rides per user type by weekday
+
+![image](https://user-images.githubusercontent.com/67650188/215545204-ce023fcd-7f36-4c92-b76a-441073c45a72.png)
+
+### VI. Rush hours bikes use
+
+![image](https://user-images.githubusercontent.com/67650188/215545699-44bc07a9-9ca5-41dc-8c9e-4f73cac46ae9.png)
+
+### VII. Map of most used stations
+
+![image](https://user-images.githubusercontent.com/67650188/215546054-2517f3ac-4687-4b24-b020-d1f3b0a8ddc7.png)
+
+
+## Stage 6: Act
+
+I have performed my analysis, and gained some insights into the data, created visualization. It is time to use these insights to make data-driven recommandations for marketing stretagies.
+
+**Again, the goal is to convert casual riders into annual members**
+
+- The ride time for members is twice shorter than casual riders. So, members tend to ride more frequetly for reletively short distance whereas casual riders ride longer distance but less frequently. This is perhaps because many members ride for commute to work daily whereas casual riders ride for tourism purposes or lesuire activities along the coastline. This conclusion is also supported by the fact that there are significantly more casual rides during weekend whilst there is little or no change in number of members’ ride over a the whole week, and that causal riders ride along turistic locations along the coastline while members seem to ride inland as much as they ride coastal areas.Thus the best days of the week to reach casual riders are Saturday, Sunday, and Friday respectively.
+
+- Since casual riders ride a lot more during the weekend compared to weekday, company could consider introducing different types of membership such as weekend membership where causal riders who only ride during weekend can be easily attracted.
+
+- Since the significant bike usage begins **from May until September**, May can be a good time to launch the campaign which builds up until September, perhaps with additional focus in the most peak season between June and July.
+
+- **Streeter Dr & Grand Ave, DuSable LAke Shore Dr & Monroe St and Millennlum Park** are the top 3 stations casual riders visited most, and thus locations where campaign can reach most casual riders.
+
+- In order to attract and motivate casual riders to purchase an annual membership, company can consider launching a new membership program that rewards/incentivizes the riders for their usage. For example, riders will collect points depend on the ride length which they can exchange for rewards. Another instance would be creating ranking system or rider’s community where only members can participate and enjoy excluded and unique features. These program and system not only attract new members but also make existing members to continue their membership.
+
+
+[Link to the Tableau Public Presentation](https://public.tableau.com/shared/PM6WF45Z2?:display_count=n&:origin=viz_share_link)
