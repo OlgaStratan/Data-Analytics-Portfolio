@@ -1,4 +1,4 @@
-# Nashville Housing (Data) Cleaning Project
+# Nashville Housing Data Cleaning Project
 In this project, I was using Microsoft SQL Server to clean [Nashville Housing dataset](https://github.com/AlexTheAnalyst/PortfolioProjects/blob/main/Nashville%20Housing%20Data%20for%20Data%20Cleaning.xlsx). The Dataset has more than 56,000 rows and 19 columns.
 
 The following tasks were performed:
